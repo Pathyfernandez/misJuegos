@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    background-image: url("img/fondo.jpg") ;
+}
+#player{
+    width: 100%;
+    visibility: visible;
+    height: 100%;
+    display: inline-block;
+    background-image: url('img/player1.png');
+    background-size: contain;
+    position: absolute;
+    left: 450px;
+    bottom:100px;
+    transform: rotate(0deg);
+    /*transform: rotate(0dg);*/
+    /*animation-name: moveRight;*/
+    animation-duration: 1s;
+    animation-iteration-count:1;
+}
+
+@keyframes moveRight {
+    100%{
+        transform:translate(40px,0px);
+    }
+}
+@keyframes moveDown{
+    100%{
+        transform:translate(0px,40px);
+    }
+}
+.enemy{
+    height: 75px;
+    width: 75px;
+    display: inline-block;
+    background-size: contain;
+    position:absolute;
+    left: 450px;
+    top:50px;	
+    background-image: url('img/enemy3.png');
+}
+
+
+
+.missile {
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: missileShoot;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    background-color: blueviolet;
+}
+
+@keyframes missileShoot {
+    0% {
+        bottom: 75px;
+    }
+    100% {
+        bottom: 100%;
+    }
+}
+
