@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: black;
+}
+
+.row{
+    line-height: 0;
+    }
+.board{
+    height: 60px;
+    display: inline-block;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+    font-family:monospace,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.wall{
+    background-color:green;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+.sushi{
+    background-color:rgb(214, 231, 214);
+    border-style: dotted;
+    border-width: 1px;			
+    height: 38px;
+    width: 38px;
+    display: inline-block;
+    background-image: url('img/sushi.png');
+    background-size: contain;
+}
+.onigiri{
+    background-color:rgb(214, 231, 214);
+    border-style: dotted;
+    border-width: 1px;
+    height: 38px;
+    width: 38px;
+    display: inline-block;
+    background-image: url('img/onigiri.png');
+    background-size: contain;
+}		
+.blank{
+    background-color:rgb(214, 231, 214);
+    border-style: dotted;
+    border-width: 1px;						
+    height: 38px;
+    width: 38px;
+    display: inline-block;
+}
+#ninjaman{
+    background-color:rgb(214, 231, 214);
+    visibility: hidden;
+    height: 38px;
+    width: 38px;
+    display: inline-block;
+    background-image: url('img/ninja.gif');
+    background-size: contain;
+    position:absolute;
+    left: 40px;
+    top:40px;
+    transform: rotate(0deg);
+    /*transform: rotate(0dg);*/
+    /*animation-name: moveRight;*/
+    animation-duration: 1s;
+    animation-iteration-count:1;
+}
+@keyframes moveRight {
+    100%{
+        transform:translate(40px,0px);
+    }
+}
+@keyframes moveDown{
+    100%{
+        transform:translate(0px,40px);
+    }
+}
+.ghost{
+    height: 38px;
+    width: 38px;
+    display: inline-block;
+    background-size: contain;
+    position:absolute;
+    left: 320px;
+    top:320px;
+    background-color:rgb(214, 231, 214);	
+    background-image: url('img/pinky.gif');
+}
+
+.pad-btn{
+    display: inline-block;
+    color:white;
+    width: 100px;
+    height: 100px;
+    font-size: 500%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: darkslategray;
+}
+#up-btn, #down-btn{
+    margin-left: 104px;
+}
+#center{
+    font-size:100%;
+    background-color: rebeccapurple;
+    margin: 4px 0px 4px 0px;
+}
+#left-btn,#right-btn,#center{
+    vertical-align: middle;
+}
